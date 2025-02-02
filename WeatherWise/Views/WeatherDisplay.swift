@@ -1,8 +1,8 @@
 //
 //  WeatherDisplay.swift
-//  WeatherWise
+//  GetTheSun
 //
-//  Created by Kshitij Kumar on 1/6/25.
+//  Created by Aaryan Deshwalon 1/6/25.
 //
 
 import SwiftUI
@@ -95,8 +95,9 @@ struct WeatherDisplay: View {
         case _ where condition.contains("wind"):
             return "wind"
         default:
-            return "sun.max"
-        }
+            //return "sun.max"
+            return "snow"
+        } 
     }
 }
 

@@ -1,8 +1,8 @@
 //
-//  WeatherWiseApp.swift
-//  WeatherWise
+//  GetTheSunApp.swift
+//  GetTheSun
 //
-//  Created by Kshitij Kumar on 1/6/25.
+//  Created by Aaryan Deshwal on 1/6/25.
 //
 
 import SwiftUI

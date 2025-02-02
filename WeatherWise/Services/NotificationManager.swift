@@ -1,15 +1,15 @@
 //
 //  NotificationManager.swift
-//  WeatherWise
+//  GetTheSun
 //
-//  Created by Kshitij Kumar on 1/6/25.
+//  Created by Aaryan Deshwalon 1/6/25.
 //
 
 //
 //  NotificationManager.swift
-//  WeatherWise
+//  GetTheSun
 //
-//  Created by Kshitij Kumar on 1/6/25.
+//  Created by Aaryan Deshwalon 1/6/25.
 //
 
 import UserNotifications

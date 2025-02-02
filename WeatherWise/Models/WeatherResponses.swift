@@ -1,8 +1,8 @@
 //
 //  WeatherResponses.swift
-//  WeatherWise
+//  GetTheSun
 //
-//  Created by Kshitij Kumar on 1/7/25.
+//  Created by Aaryan Deshwalon 1/7/25.
 //
 
 

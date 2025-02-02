@@ -1,8 +1,8 @@
 //
-//  WeatherWiseUITests.swift
-//  WeatherWiseUITests
+//  GetTheSunUITests.swift
+//  GetTheSunUITests
 //
-//  Created by Kshitij Kumar on 1/6/25.
+//  Created by Aaryan Deshwalon 1/6/25.
 //
 
 import XCTest

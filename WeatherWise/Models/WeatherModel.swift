@@ -1,8 +1,8 @@
 //
 //  Weather.swift
-//  WeatherWise
+//  GetTheSun
 //
-//  Created by Kshitij Kumar on 1/6/25.
+//  Created by Aaryan Deshwalon 1/6/25.
 //
 
 import Foundation
@@ -17,7 +17,7 @@ struct WeatherModel: Codable, Identifiable {
     
     var isGoodWeather: Bool {
         //return true for testing
-         return true
+        // return true
         
 //        production conditons in phase 1
 //        return temperature >= 18 && temperature <= 25 &&
@@ -25,9 +25,9 @@ struct WeatherModel: Codable, Identifiable {
 //               windSpeed < 20
         
 //        production conditons phase 2
-//            return temperature >= 65 && temperature <= 77 && // Changed from Celsius to Fahrenheit
-//                   humidity < 70 &&
-//                   windSpeed < 12 // Changed from km/h to mph
+            return temperature >= 65 && temperature <= 77 &&
+                   humidity < 70 &&
+                   windSpeed < 12
     }
 }
 
