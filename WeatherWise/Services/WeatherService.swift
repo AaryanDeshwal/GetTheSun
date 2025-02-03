@@ -50,8 +50,13 @@ class WeatherService: NSObject, ObservableObject, CLLocationManagerDelegate {
        locationManager.startUpdatingLocation()
    }
    
+    
+    
+    
+    
    func fetchWeather(latitude: Double, longitude: Double) async throws -> WeatherModel {
        //let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=\(apiKey)&units=metric"
+       let UV: Double
        let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=\(apiKey)&units=imperial"  // Changed to imperial
        guard let url = URL(string: urlString) else {
            throw URLError(.badURL)
@@ -59,16 +64,56 @@ class WeatherService: NSObject, ObservableObject, CLLocationManagerDelegate {
        
        let (data, _) = try await URLSession.shared.data(from: url)
        
+       //getting UV index
+       
+       
+       let urlStringUV = "https://api.openweathermap.org/data/2.5/uvi?lat=\(latitude)&lon=\(longitude)&appid=\(apiKey)"
+       guard let urlUV = URL(string: urlStringUV) else {
+           throw URLError(.badURL)
+       }
+       let (dataUV, _) = try await URLSession.shared.data(from: urlUV)
+       
+        do {
+               let decoder = JSONDecoder()
+               let uvIndexResponse = try decoder.decode(UVIndexResponse.self, from: dataUV)
+            UV = uvIndexResponse.value
+        } catch {
+            print("Weather decoding error: \(error)")
+            throw error
+        }
+       //end of getting UV Index
+       
+       
+       
        do {
            let decoder = JSONDecoder()
-           let response = try decoder.decode(OpenWeatherResponse.self, from: data)
+           let weatherResponse = try decoder.decode(OpenWeatherResponse.self, from: data)
            
+           let weatherConditions = weatherResponse.weather.map { $0.description }
+           let joinedConditions = weatherConditions.joined(separator: ", ")
+
+               
            return WeatherModel(
-               temperature: response.main.temp,
-               condition: response.weather.first?.main ?? "Unknown",
-               humidity: response.main.humidity,
-               windSpeed: response.wind.speed,
-               locationName: "\(response.name), \(response.sys.country)"
+            coordinate: weatherResponse.coord,
+                weather: weatherResponse.weather,
+                base: weatherResponse.base,
+                main: weatherResponse.main,
+                visibility: weatherResponse.visibility,
+                wind: weatherResponse.wind,
+                clouds: weatherResponse.clouds,
+                dt: weatherResponse.dt,
+                sys: weatherResponse.sys,
+                timezone: weatherResponse.timezone,
+                id: weatherResponse.id,
+                name: weatherResponse.name,
+                cod: weatherResponse.cod,
+                locationName: "\( weatherResponse.name), \(weatherResponse.sys.country)",
+                condition: weatherResponse.weather.first?.main ?? "Unknown",
+                UV: UV,
+                condition2: joinedConditions,
+                icon: weatherResponse.weather.first?.icon ?? "Unknown"
+           
+               
            )
        } catch {
            print("Weather decoding error: \(error)")
@@ -107,16 +152,16 @@ class WeatherService: NSObject, ObservableObject, CLLocationManagerDelegate {
                    title: "Perfect Weather ☀️",
                    body: """
                    Time to go outside!
-                   Temperature: \(Int(weather.temperature))°F
-                   Humidity: \(weather.humidity)%
-                   Wind: \(String(format: "%.1f", weather.windSpeed)) mph
+                   Temperature: \(Int(weather.main.temp))°F
+                   Humidity: \(weather.main.humidity)%
+                   Wind: \(String(format: "%.1f", weather.wind.speed)) mph
                    Location: \(weather.locationName)
                    Time: \(Date().formatted(date: .omitted, time: .shortened))
                    """
                )
            } else {
                print("🌥️ Weather conditions not ideal - no notification sent")
-               print("Temperature: \(weather.temperature)°F, Humidity: \(weather.humidity)%, Wind: \(weather.windSpeed) mph")
+               print("Temperature: \(weather.main.temp)°F, Humidity: \(weather.main.humidity)%, Wind: \(weather.wind.speed) mph")
            }
        }
    

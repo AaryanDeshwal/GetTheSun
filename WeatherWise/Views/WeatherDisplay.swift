@@ -45,19 +45,59 @@ struct WeatherDisplay: View {
                 .foregroundColor(.gray)
             
             HStack {
-                Image(systemName: getWeatherIcon(condition: weather.condition))
+               
+                Image(systemName: getWeatherIcon(condition: weather.condition2))
+                                   .font(.system(size: 60))
                     .font(.system(size: 60))
 //                Text("\(Int(weather.temperature))°C")
-                Text("\(Int(weather.temperature))°F")
+                Text("\(Int(weather.main.temp))°F")
                     .font(.system(size: 50))
+                    
             }
             
             VStack(alignment: .leading, spacing: 8) {
-                WeatherInfoRow(icon: "humidity", label: "Humidity", value: "\(weather.humidity)%")
+                
+                HStack {
+                        Text("")
+                    }
+                
+                WeatherInfoRow(icon: "humidity", label: "Humidity", value: "\(weather.main.humidity)%")
             //WeatherInfoRow(icon: "wind", label: "Wind Speed", value: "\(String(format: "%.1f", weather.windSpeed)) km/h")
-                WeatherInfoRow(icon: "wind", label: "Wind Speed", value: "\(String(format: "%.1f", weather.windSpeed)) mph")
+                WeatherInfoRow(icon: "wind", label: "Wind Speed", value: "\(String(format: "%.1f", weather.wind.speed)) mph")
+                WeatherInfoRow(icon: "cloud", label: "Cloud ", value: "\(weather.clouds.all)%")
+                    
+            }
+            VStack {
+                if weather.isGoodWeather {
+                    Image(systemName: "sun")
+                   Text("Weather condition is good")
+                        
+                    Spacer()
+                    Text("Enjoy Outside")
+                        .bold()
+                        
+                } else {
+                    HStack {
+                        Image(systemName: "xmark")
+                            .foregroundColor(.red)
+                        Text("Weather condition is not good")
+                        Spacer()
+                        Text("Releax inside")
+                            .bold()
+                        
+                    }
+                    .frame(height: 50)
+                }
             }
             
+            HStack {
+                Text("By: Aaryan Deshwal")
+                    .font(.system(size: 10)) // This sets the font size to 10 points
+                Spacer() // This pushes the owner name to the right
+                Text("v0.1")
+                    .font(.system(size: 10)) // This sets the font size to 10 points
+            }
+
             // Countdown Timer
             HStack {
                 Image(systemName: "clock")
@@ -70,6 +110,7 @@ struct WeatherDisplay: View {
             .background(Color.blue.opacity(0.1))
             .cornerRadius(10)
         }
+
         .padding()
         .onReceive(timer) { _ in
             if timeRemaining > 0 {
@@ -77,27 +118,39 @@ struct WeatherDisplay: View {
             } else {
                 timeRemaining = timerInterval
             }
+            
+            
         }
+       
+        //Not getting printed in the end
+        HStack {
+            Text("By: Aaryan Deshwal")
+                .font(.system(size: 10)) // This sets the font size to 10 points
+            Spacer() // This pushes the owner name to the right
+            Text("v0.1")
+                .font(.system(size: 10)) // This sets the font size to 10 points
+        }
+                
+     
     }
     
+    
+  
+  
+    
     private func getWeatherIcon(condition: String) -> String {
-        switch condition.lowercased() {
-        case _ where condition.contains("rain"):
-            return "cloud.rain"
-        case _ where condition.contains("cloud"):
-            return "cloud"
-        case _ where condition.contains("snow"):
-            return "snow"
-        case _ where condition.contains("thunder"):
-            return "cloud.bolt"
-        case _ where condition.contains("fog"):
-            return "cloud.fog"
-        case _ where condition.contains("wind"):
-            return "wind"
-        default:
-            //return "sun.max"
-            return "snow"
-        } 
+        switch condition.lowercased()  {
+        case let c where c.contains("thunderstorm"): return "cloud.bolt.rain"
+        case let c where c.contains("drizzle"): return "cloud.drizzle"
+        case let c where c.contains("rain"): return "cloud.rain"
+        case let c where c.contains("snow"): return "cloud.snow"
+        case let c where c.contains("clear"): return "sun.max"
+        case let c where c.contains("clouds"): return "cloud"
+        case let c where c.contains("mist"), let c where c.contains("smoke"), let c where c.contains("haze"), let c where c.contains("sand"), let c where c.contains("dust"), let c where c.contains("fog"): return "cloud.fog"
+        case let c where c.contains("tornado"): return "tornado"
+        case let c where c.contains("squall"): return "wind"
+        default: return "questionmark.circle"
+        }
     }
 }
 
