@@ -24,18 +24,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7E8F03AA2D2C7C79008FD86B /* WeatherWise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherWise.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E8F03BA2D2C7C7A008FD86B /* WeatherWiseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherWiseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E8F03C42D2C7C7A008FD86B /* WeatherWiseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherWiseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E8F03AA2D2C7C79008FD86B /* GetTheSun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetTheSun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E8F03BA2D2C7C7A008FD86B /* GetTheSunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetTheSunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E8F03C42D2C7C7A008FD86B /* GetTheSunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetTheSunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		7E8F03FB2D2C871F008FD86B /* Exceptions for "WeatherWise" folder in "WeatherWise" target */ = {
+		7E8F03FB2D2C871F008FD86B /* Exceptions for "WeatherWise" folder in "GetTheSun" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 7E8F03A92D2C7C79008FD86B /* WeatherWise */;
+			target = 7E8F03A92D2C7C79008FD86B /* GetTheSun */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -43,7 +43,7 @@
 		7E8F03AC2D2C7C79008FD86B /* WeatherWise */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				7E8F03FB2D2C871F008FD86B /* Exceptions for "WeatherWise" folder in "WeatherWise" target */,
+				7E8F03FB2D2C871F008FD86B /* Exceptions for "WeatherWise" folder in "GetTheSun" target */,
 			);
 			path = WeatherWise;
 			sourceTree = "<group>";
@@ -98,9 +98,9 @@
 		7E8F03AB2D2C7C79008FD86B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7E8F03AA2D2C7C79008FD86B /* WeatherWise.app */,
-				7E8F03BA2D2C7C7A008FD86B /* WeatherWiseTests.xctest */,
-				7E8F03C42D2C7C7A008FD86B /* WeatherWiseUITests.xctest */,
+				7E8F03AA2D2C7C79008FD86B /* GetTheSun.app */,
+				7E8F03BA2D2C7C7A008FD86B /* GetTheSunTests.xctest */,
+				7E8F03C42D2C7C7A008FD86B /* GetTheSunUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,9 +108,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7E8F03A92D2C7C79008FD86B /* WeatherWise */ = {
+		7E8F03A92D2C7C79008FD86B /* GetTheSun */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7E8F03CE2D2C7C7A008FD86B /* Build configuration list for PBXNativeTarget "WeatherWise" */;
+			buildConfigurationList = 7E8F03CE2D2C7C7A008FD86B /* Build configuration list for PBXNativeTarget "GetTheSun" */;
 			buildPhases = (
 				7E8F03A62D2C7C79008FD86B /* Sources */,
 				7E8F03A72D2C7C79008FD86B /* Frameworks */,
@@ -123,16 +123,16 @@
 			fileSystemSynchronizedGroups = (
 				7E8F03AC2D2C7C79008FD86B /* WeatherWise */,
 			);
-			name = WeatherWise;
+			name = GetTheSun;
 			packageProductDependencies = (
 			);
 			productName = WeatherWise;
-			productReference = 7E8F03AA2D2C7C79008FD86B /* WeatherWise.app */;
+			productReference = 7E8F03AA2D2C7C79008FD86B /* GetTheSun.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7E8F03B92D2C7C7A008FD86B /* WeatherWiseTests */ = {
+		7E8F03B92D2C7C7A008FD86B /* GetTheSunTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7E8F03D12D2C7C7A008FD86B /* Build configuration list for PBXNativeTarget "WeatherWiseTests" */;
+			buildConfigurationList = 7E8F03D12D2C7C7A008FD86B /* Build configuration list for PBXNativeTarget "GetTheSunTests" */;
 			buildPhases = (
 				7E8F03B62D2C7C7A008FD86B /* Sources */,
 				7E8F03B72D2C7C7A008FD86B /* Frameworks */,
@@ -146,16 +146,16 @@
 			fileSystemSynchronizedGroups = (
 				7E8F03BD2D2C7C7A008FD86B /* WeatherWiseTests */,
 			);
-			name = WeatherWiseTests;
+			name = GetTheSunTests;
 			packageProductDependencies = (
 			);
 			productName = WeatherWiseTests;
-			productReference = 7E8F03BA2D2C7C7A008FD86B /* WeatherWiseTests.xctest */;
+			productReference = 7E8F03BA2D2C7C7A008FD86B /* GetTheSunTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7E8F03C32D2C7C7A008FD86B /* WeatherWiseUITests */ = {
+		7E8F03C32D2C7C7A008FD86B /* GetTheSunUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7E8F03D42D2C7C7A008FD86B /* Build configuration list for PBXNativeTarget "WeatherWiseUITests" */;
+			buildConfigurationList = 7E8F03D42D2C7C7A008FD86B /* Build configuration list for PBXNativeTarget "GetTheSunUITests" */;
 			buildPhases = (
 				7E8F03C02D2C7C7A008FD86B /* Sources */,
 				7E8F03C12D2C7C7A008FD86B /* Frameworks */,
@@ -169,11 +169,11 @@
 			fileSystemSynchronizedGroups = (
 				7E8F03C72D2C7C7A008FD86B /* WeatherWiseUITests */,
 			);
-			name = WeatherWiseUITests;
+			name = GetTheSunUITests;
 			packageProductDependencies = (
 			);
 			productName = WeatherWiseUITests;
-			productReference = 7E8F03C42D2C7C7A008FD86B /* WeatherWiseUITests.xctest */;
+			productReference = 7E8F03C42D2C7C7A008FD86B /* GetTheSunUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -185,6 +185,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
+				ORGANIZATIONNAME = "Aaryan Deshwal";
 				TargetAttributes = {
 					7E8F03A92D2C7C79008FD86B = {
 						CreatedOnToolsVersion = 16.2;
@@ -199,7 +200,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7E8F03A52D2C7C79008FD86B /* Build configuration list for PBXProject "WeatherWise" */;
+			buildConfigurationList = 7E8F03A52D2C7C79008FD86B /* Build configuration list for PBXProject "GetTheSun" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -215,9 +216,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7E8F03A92D2C7C79008FD86B /* WeatherWise */,
-				7E8F03B92D2C7C7A008FD86B /* WeatherWiseTests */,
-				7E8F03C32D2C7C7A008FD86B /* WeatherWiseUITests */,
+				7E8F03A92D2C7C79008FD86B /* GetTheSun */,
+				7E8F03B92D2C7C7A008FD86B /* GetTheSunTests */,
+				7E8F03C32D2C7C7A008FD86B /* GetTheSunUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -273,12 +274,12 @@
 /* Begin PBXTargetDependency section */
 		7E8F03BC2D2C7C7A008FD86B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7E8F03A92D2C7C79008FD86B /* WeatherWise */;
+			target = 7E8F03A92D2C7C79008FD86B /* GetTheSun */;
 			targetProxy = 7E8F03BB2D2C7C7A008FD86B /* PBXContainerItemProxy */;
 		};
 		7E8F03C62D2C7C7A008FD86B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7E8F03A92D2C7C79008FD86B /* WeatherWise */;
+			target = 7E8F03A92D2C7C79008FD86B /* GetTheSun */;
 			targetProxy = 7E8F03C52D2C7C7A008FD86B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -484,7 +485,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherWise.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WeatherWise";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GetTheSun.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GetTheSun";
 			};
 			name = Debug;
 		};
@@ -503,7 +504,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherWise.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WeatherWise";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GetTheSun.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GetTheSun";
 			};
 			name = Release;
 		};
@@ -544,7 +545,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7E8F03A52D2C7C79008FD86B /* Build configuration list for PBXProject "WeatherWise" */ = {
+		7E8F03A52D2C7C79008FD86B /* Build configuration list for PBXProject "GetTheSun" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7E8F03CC2D2C7C7A008FD86B /* Debug */,
@@ -553,7 +554,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7E8F03CE2D2C7C7A008FD86B /* Build configuration list for PBXNativeTarget "WeatherWise" */ = {
+		7E8F03CE2D2C7C7A008FD86B /* Build configuration list for PBXNativeTarget "GetTheSun" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7E8F03CF2D2C7C7A008FD86B /* Debug */,
@@ -562,7 +563,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7E8F03D12D2C7C7A008FD86B /* Build configuration list for PBXNativeTarget "WeatherWiseTests" */ = {
+		7E8F03D12D2C7C7A008FD86B /* Build configuration list for PBXNativeTarget "GetTheSunTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7E8F03D22D2C7C7A008FD86B /* Debug */,
@@ -571,7 +572,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7E8F03D42D2C7C7A008FD86B /* Build configuration list for PBXNativeTarget "WeatherWiseUITests" */ = {
+		7E8F03D42D2C7C7A008FD86B /* Build configuration list for PBXNativeTarget "GetTheSunUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7E8F03D52D2C7C7A008FD86B /* Debug */,

@@ -80,9 +80,9 @@ struct WeatherDisplay: View {
                     HStack {
                         Image(systemName: "xmark")
                             .foregroundColor(.red)
-                        Text("Weather condition is not good")
+                        Text("weather condition might not be suitable,")
                         Spacer()
-                        Text("Releax inside")
+                        Text("Relax inside")
                             .bold()
                         
                     }
@@ -90,13 +90,13 @@ struct WeatherDisplay: View {
                 }
             }
             
-            HStack {
-                Text("By: Aaryan Deshwal")
-                    .font(.system(size: 10)) // This sets the font size to 10 points
-                Spacer() // This pushes the owner name to the right
-                Text("v0.1")
-                    .font(.system(size: 10)) // This sets the font size to 10 points
-            }
+//            HStack {
+//                Text("By: Aaryan Deshwal")
+//                    .font(.system(size: 10)) // This sets the font size to 10 points
+//                Spacer() // This pushes the owner name to the right
+//                Text("v0.1")
+//                    .font(.system(size: 10)) // This sets the font size to 10 points
+//            }
 
             // Countdown Timer
             HStack {
@@ -123,13 +123,13 @@ struct WeatherDisplay: View {
         }
        
         //Not getting printed in the end
-        HStack {
-            Text("By: Aaryan Deshwal")
-                .font(.system(size: 10)) // This sets the font size to 10 points
-            Spacer() // This pushes the owner name to the right
-            Text("v0.1")
-                .font(.system(size: 10)) // This sets the font size to 10 points
-        }
+//        HStack {
+//            Text("By: Aaryan Deshwal")
+//                .font(.system(size: 10)) // This sets the font size to 10 points
+//            Spacer() // This pushes the owner name to the right
+//            Text("v0.1")
+//                .font(.system(size: 10)) // This sets the font size to 10 points
+//        }
                 
      
     }

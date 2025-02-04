@@ -20,7 +20,7 @@ class WeatherService: NSObject, ObservableObject, CLLocationManagerDelegate {
    
    // Time interval for weather checks (30 minutes = 1800 seconds)
    // Set to 60 seconds for testing
-   private let weatherCheckInterval: TimeInterval = 60
+   private let weatherCheckInterval: TimeInterval = 1800
    
    enum LocationStatus {
        case unknown
