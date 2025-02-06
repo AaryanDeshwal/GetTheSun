@@ -412,7 +412,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherWise/Preview Content\"";
-				DEVELOPMENT_TEAM = 6DA6C7C447;
+				DEVELOPMENT_TEAM = 7244SN28YQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherWise/Info.plist;
@@ -429,7 +429,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.weatherActivity.WeatherWise.WeatherWise;
+				PRODUCT_BUNDLE_IDENTIFIER = GetTheSunAppAaryanDeshwalFeb2025;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -445,7 +445,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherWise/Preview Content\"";
-				DEVELOPMENT_TEAM = 6DA6C7C447;
+				DEVELOPMENT_TEAM = 7244SN28YQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherWise/Info.plist;
@@ -462,7 +462,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.weatherActivity.WeatherWise.WeatherWise;
+				PRODUCT_BUNDLE_IDENTIFIER = GetTheSunAppAaryanDeshwalFeb2025;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

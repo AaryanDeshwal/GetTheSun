@@ -65,22 +65,28 @@ struct WeatherDisplay: View {
             //WeatherInfoRow(icon: "wind", label: "Wind Speed", value: "\(String(format: "%.1f", weather.windSpeed)) km/h")
                 WeatherInfoRow(icon: "wind", label: "Wind Speed", value: "\(String(format: "%.1f", weather.wind.speed)) mph")
                 WeatherInfoRow(icon: "cloud", label: "Cloud ", value: "\(weather.clouds.all)%")
+                WeatherInfoRow(icon: "rays", label: "UV Index", value: "\(weather.UV)")
                     
             }
             VStack {
-                if weather.isGoodWeather {
-                    Image(systemName: "sun")
-                   Text("Weather condition is good")
+                
+                    if weather.isGoodWeather {
+                        HStack {
                         
-                    Spacer()
-                    Text("Enjoy Outside")
-                        .bold()
-                        
+                            Image(systemName: "sun.min")
+                            Text("Weather condition looks good")
+                                .foregroundStyle(.orange)
+                            Spacer()
+                            Text("Enjoy Outside")
+                                .bold()
+                                .foregroundStyle(.orange)
+                            
+                        }
                 } else {
                     HStack {
                         Image(systemName: "xmark")
                             .foregroundColor(.red)
-                        Text("weather condition might not be suitable,")
+                        Text("weather condition might not be suitable")
                         Spacer()
                         Text("Relax inside")
                             .bold()

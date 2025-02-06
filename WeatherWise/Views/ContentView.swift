@@ -13,6 +13,8 @@ struct ContentView: View {
 
     
     var body: some View {
+        
+        
         NavigationView {
             Group {
                 switch weatherService.locationStatus {
@@ -41,7 +43,7 @@ struct ContentView: View {
         }
         HStack {
          
-            Text(" By: Aaryan Deshwal (v0.1)")
+            Text(" By: Aaryan Deshwal (Promoting healthy habits)")
                     .font(.system(size: 10)) // This sets the font size to 10 points
             
             Spacer() // This pushes the owner name to the right

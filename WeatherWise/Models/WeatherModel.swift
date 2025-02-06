@@ -47,10 +47,10 @@ struct WeatherModel: Codable, Identifiable {
 //
 //
         
-            let temperatureOK = main.temp > 60
+            let temperatureOK = main.temp > 50
             let windOK = wind.speed < 10
-            let cloudsOK = clouds.all < 50
-            let uvIndexOK = UV > 3
+            let cloudsOK = clouds.all < 70
+            let uvIndexOK = UV < 7
 
         let isDaytime = sys.sunrise < Int(Date().timeIntervalSince1970) && sys.sunset > Int(Date().timeIntervalSince1970)
 
